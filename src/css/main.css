@@ -1,0 +1,840 @@
+/*! HTML5 Boilerplate v5.1.0 | MIT License | https://html5boilerplate.com/ */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+@import url(../../bower_components/normalize-css/normalize.css);
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4; }
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+/*
+ * A better looking default horizontal rule
+ */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0; }
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle; }
+
+/*
+ * Remove default fieldset styles.
+ */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+textarea {
+  resize: vertical; }
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0; }
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+.grid {
+  width: 80%;
+  margin: 0 auto; }
+  .grid [class*="col-"] {
+    float: left;
+    box-sizing: border-box;
+    padding: 0 0.5em;
+    display: block; }
+  .grid .col-1-2 {
+    width: 50%; }
+  .grid .pad-1-2 {
+    margin-bottom: 50%; }
+  .grid .col-2-2 {
+    width: 100%; }
+  .grid .col-1-3 {
+    width: 33.33333%; }
+  .grid .pad-1-3 {
+    margin-bottom: 33.33333%; }
+  .grid .col-2-3 {
+    width: 66.66667%; }
+  .grid .pad-2-3 {
+    margin-bottom: 66.66667%; }
+  .grid .col-3-3 {
+    width: 100%; }
+  .grid .col-1-4 {
+    width: 25%; }
+  .grid .pad-1-4 {
+    margin-bottom: 25%; }
+  .grid .col-2-4 {
+    width: 50%; }
+  .grid .pad-2-4 {
+    margin-bottom: 50%; }
+  .grid .col-3-4 {
+    width: 75%; }
+  .grid .pad-3-4 {
+    margin-bottom: 75%; }
+  .grid .col-4-4 {
+    width: 100%; }
+  .grid .col-1-6 {
+    width: 16.66667%; }
+  .grid .pad-1-6 {
+    margin-bottom: 16.66667%; }
+  .grid .col-2-6 {
+    width: 33.33333%; }
+  .grid .pad-2-6 {
+    margin-bottom: 33.33333%; }
+  .grid .col-3-6 {
+    width: 50%; }
+  .grid .pad-3-6 {
+    margin-bottom: 50%; }
+  .grid .col-4-6 {
+    width: 66.66667%; }
+  .grid .pad-4-6 {
+    margin-bottom: 66.66667%; }
+  .grid .col-5-6 {
+    width: 83.33333%; }
+  .grid .pad-5-6 {
+    margin-bottom: 83.33333%; }
+  .grid .col-6-6 {
+    width: 100%; }
+  .grid .col-1-8 {
+    width: 12.5%; }
+  .grid .pad-1-8 {
+    margin-bottom: 12.5%; }
+  .grid .col-2-8 {
+    width: 25%; }
+  .grid .pad-2-8 {
+    margin-bottom: 25%; }
+  .grid .col-3-8 {
+    width: 37.5%; }
+  .grid .pad-3-8 {
+    margin-bottom: 37.5%; }
+  .grid .col-4-8 {
+    width: 50%; }
+  .grid .pad-4-8 {
+    margin-bottom: 50%; }
+  .grid .col-5-8 {
+    width: 62.5%; }
+  .grid .pad-5-8 {
+    margin-bottom: 62.5%; }
+  .grid .col-6-8 {
+    width: 75%; }
+  .grid .pad-6-8 {
+    margin-bottom: 75%; }
+  .grid .col-7-8 {
+    width: 87.5%; }
+  .grid .pad-7-8 {
+    margin-bottom: 87.5%; }
+  .grid .col-8-8 {
+    width: 100%; }
+  .grid .col-1-12 {
+    width: 8.33333%; }
+  .grid .pad-1-12 {
+    margin-bottom: 8.33333%; }
+  .grid .col-2-12 {
+    width: 16.66667%; }
+  .grid .pad-2-12 {
+    margin-bottom: 16.66667%; }
+  .grid .col-3-12 {
+    width: 25%; }
+  .grid .pad-3-12 {
+    margin-bottom: 25%; }
+  .grid .col-4-12 {
+    width: 33.33333%; }
+  .grid .pad-4-12 {
+    margin-bottom: 33.33333%; }
+  .grid .col-5-12 {
+    width: 41.66667%; }
+  .grid .pad-5-12 {
+    margin-bottom: 41.66667%; }
+  .grid .col-6-12 {
+    width: 50%; }
+  .grid .pad-6-12 {
+    margin-bottom: 50%; }
+  .grid .col-7-12 {
+    width: 58.33333%; }
+  .grid .pad-7-12 {
+    margin-bottom: 58.33333%; }
+  .grid .col-8-12 {
+    width: 66.66667%; }
+  .grid .pad-8-12 {
+    margin-bottom: 66.66667%; }
+  .grid .col-9-12 {
+    width: 75%; }
+  .grid .pad-9-12 {
+    margin-bottom: 75%; }
+  .grid .col-10-12 {
+    width: 83.33333%; }
+  .grid .pad-10-12 {
+    margin-bottom: 83.33333%; }
+  .grid .col-11-12 {
+    width: 91.66667%; }
+  .grid .pad-11-12 {
+    margin-bottom: 91.66667%; }
+  .grid .col-12-12 {
+    width: 100%; }
+  .grid .col-1-16 {
+    width: 6.25%; }
+  .grid .pad-1-16 {
+    margin-bottom: 6.25%; }
+  .grid .col-2-16 {
+    width: 12.5%; }
+  .grid .pad-2-16 {
+    margin-bottom: 12.5%; }
+  .grid .col-3-16 {
+    width: 18.75%; }
+  .grid .pad-3-16 {
+    margin-bottom: 18.75%; }
+  .grid .col-4-16 {
+    width: 25%; }
+  .grid .pad-4-16 {
+    margin-bottom: 25%; }
+  .grid .col-5-16 {
+    width: 31.25%; }
+  .grid .pad-5-16 {
+    margin-bottom: 31.25%; }
+  .grid .col-6-16 {
+    width: 37.5%; }
+  .grid .pad-6-16 {
+    margin-bottom: 37.5%; }
+  .grid .col-7-16 {
+    width: 43.75%; }
+  .grid .pad-7-16 {
+    margin-bottom: 43.75%; }
+  .grid .col-8-16 {
+    width: 50%; }
+  .grid .pad-8-16 {
+    margin-bottom: 50%; }
+  .grid .col-9-16 {
+    width: 56.25%; }
+  .grid .pad-9-16 {
+    margin-bottom: 56.25%; }
+  .grid .col-10-16 {
+    width: 62.5%; }
+  .grid .pad-10-16 {
+    margin-bottom: 62.5%; }
+  .grid .col-11-16 {
+    width: 68.75%; }
+  .grid .pad-11-16 {
+    margin-bottom: 68.75%; }
+  .grid .col-12-16 {
+    width: 75%; }
+  .grid .pad-12-16 {
+    margin-bottom: 75%; }
+  .grid .col-13-16 {
+    width: 81.25%; }
+  .grid .pad-13-16 {
+    margin-bottom: 81.25%; }
+  .grid .col-14-16 {
+    width: 87.5%; }
+  .grid .pad-14-16 {
+    margin-bottom: 87.5%; }
+  .grid .col-15-16 {
+    width: 93.75%; }
+  .grid .pad-15-16 {
+    margin-bottom: 93.75%; }
+  .grid .col-16-16 {
+    width: 100%; }
+  .grid .col-1-18 {
+    width: 5.55556%; }
+  .grid .pad-1-18 {
+    margin-bottom: 5.55556%; }
+  .grid .col-2-18 {
+    width: 11.11111%; }
+  .grid .pad-2-18 {
+    margin-bottom: 11.11111%; }
+  .grid .col-3-18 {
+    width: 16.66667%; }
+  .grid .pad-3-18 {
+    margin-bottom: 16.66667%; }
+  .grid .col-4-18 {
+    width: 22.22222%; }
+  .grid .pad-4-18 {
+    margin-bottom: 22.22222%; }
+  .grid .col-5-18 {
+    width: 27.77778%; }
+  .grid .pad-5-18 {
+    margin-bottom: 27.77778%; }
+  .grid .col-6-18 {
+    width: 33.33333%; }
+  .grid .pad-6-18 {
+    margin-bottom: 33.33333%; }
+  .grid .col-7-18 {
+    width: 38.88889%; }
+  .grid .pad-7-18 {
+    margin-bottom: 38.88889%; }
+  .grid .col-8-18 {
+    width: 44.44444%; }
+  .grid .pad-8-18 {
+    margin-bottom: 44.44444%; }
+  .grid .col-9-18 {
+    width: 50%; }
+  .grid .pad-9-18 {
+    margin-bottom: 50%; }
+  .grid .col-10-18 {
+    width: 55.55556%; }
+  .grid .pad-10-18 {
+    margin-bottom: 55.55556%; }
+  .grid .col-11-18 {
+    width: 61.11111%; }
+  .grid .pad-11-18 {
+    margin-bottom: 61.11111%; }
+  .grid .col-12-18 {
+    width: 66.66667%; }
+  .grid .pad-12-18 {
+    margin-bottom: 66.66667%; }
+  .grid .col-13-18 {
+    width: 72.22222%; }
+  .grid .pad-13-18 {
+    margin-bottom: 72.22222%; }
+  .grid .col-14-18 {
+    width: 77.77778%; }
+  .grid .pad-14-18 {
+    margin-bottom: 77.77778%; }
+  .grid .col-15-18 {
+    width: 83.33333%; }
+  .grid .pad-15-18 {
+    margin-bottom: 83.33333%; }
+  .grid .col-16-18 {
+    width: 88.88889%; }
+  .grid .pad-16-18 {
+    margin-bottom: 88.88889%; }
+  .grid .col-17-18 {
+    width: 94.44444%; }
+  .grid .pad-17-18 {
+    margin-bottom: 94.44444%; }
+  .grid .col-18-18 {
+    width: 100%; }
+  .grid .col-1-24 {
+    width: 4.16667%; }
+  .grid .pad-1-24 {
+    margin-bottom: 4.16667%; }
+  .grid .col-2-24 {
+    width: 8.33333%; }
+  .grid .pad-2-24 {
+    margin-bottom: 8.33333%; }
+  .grid .col-3-24 {
+    width: 12.5%; }
+  .grid .pad-3-24 {
+    margin-bottom: 12.5%; }
+  .grid .col-4-24 {
+    width: 16.66667%; }
+  .grid .pad-4-24 {
+    margin-bottom: 16.66667%; }
+  .grid .col-5-24 {
+    width: 20.83333%; }
+  .grid .pad-5-24 {
+    margin-bottom: 20.83333%; }
+  .grid .col-6-24 {
+    width: 25%; }
+  .grid .pad-6-24 {
+    margin-bottom: 25%; }
+  .grid .col-7-24 {
+    width: 29.16667%; }
+  .grid .pad-7-24 {
+    margin-bottom: 29.16667%; }
+  .grid .col-8-24 {
+    width: 33.33333%; }
+  .grid .pad-8-24 {
+    margin-bottom: 33.33333%; }
+  .grid .col-9-24 {
+    width: 37.5%; }
+  .grid .pad-9-24 {
+    margin-bottom: 37.5%; }
+  .grid .col-10-24 {
+    width: 41.66667%; }
+  .grid .pad-10-24 {
+    margin-bottom: 41.66667%; }
+  .grid .col-11-24 {
+    width: 45.83333%; }
+  .grid .pad-11-24 {
+    margin-bottom: 45.83333%; }
+  .grid .col-12-24 {
+    width: 50%; }
+  .grid .pad-12-24 {
+    margin-bottom: 50%; }
+  .grid .col-13-24 {
+    width: 54.16667%; }
+  .grid .pad-13-24 {
+    margin-bottom: 54.16667%; }
+  .grid .col-14-24 {
+    width: 58.33333%; }
+  .grid .pad-14-24 {
+    margin-bottom: 58.33333%; }
+  .grid .col-15-24 {
+    width: 62.5%; }
+  .grid .pad-15-24 {
+    margin-bottom: 62.5%; }
+  .grid .col-16-24 {
+    width: 66.66667%; }
+  .grid .pad-16-24 {
+    margin-bottom: 66.66667%; }
+  .grid .col-17-24 {
+    width: 70.83333%; }
+  .grid .pad-17-24 {
+    margin-bottom: 70.83333%; }
+  .grid .col-18-24 {
+    width: 75%; }
+  .grid .pad-18-24 {
+    margin-bottom: 75%; }
+  .grid .col-19-24 {
+    width: 79.16667%; }
+  .grid .pad-19-24 {
+    margin-bottom: 79.16667%; }
+  .grid .col-20-24 {
+    width: 83.33333%; }
+  .grid .pad-20-24 {
+    margin-bottom: 83.33333%; }
+  .grid .col-21-24 {
+    width: 87.5%; }
+  .grid .pad-21-24 {
+    margin-bottom: 87.5%; }
+  .grid .col-22-24 {
+    width: 91.66667%; }
+  .grid .pad-22-24 {
+    margin-bottom: 91.66667%; }
+  .grid .col-23-24 {
+    width: 95.83333%; }
+  .grid .pad-23-24 {
+    margin-bottom: 95.83333%; }
+  .grid .col-24-24 {
+    width: 100%; }
+  .grid .col-1-32 {
+    width: 3.125%; }
+  .grid .pad-1-32 {
+    margin-bottom: 3.125%; }
+  .grid .col-2-32 {
+    width: 6.25%; }
+  .grid .pad-2-32 {
+    margin-bottom: 6.25%; }
+  .grid .col-3-32 {
+    width: 9.375%; }
+  .grid .pad-3-32 {
+    margin-bottom: 9.375%; }
+  .grid .col-4-32 {
+    width: 12.5%; }
+  .grid .pad-4-32 {
+    margin-bottom: 12.5%; }
+  .grid .col-5-32 {
+    width: 15.625%; }
+  .grid .pad-5-32 {
+    margin-bottom: 15.625%; }
+  .grid .col-6-32 {
+    width: 18.75%; }
+  .grid .pad-6-32 {
+    margin-bottom: 18.75%; }
+  .grid .col-7-32 {
+    width: 21.875%; }
+  .grid .pad-7-32 {
+    margin-bottom: 21.875%; }
+  .grid .col-8-32 {
+    width: 25%; }
+  .grid .pad-8-32 {
+    margin-bottom: 25%; }
+  .grid .col-9-32 {
+    width: 28.125%; }
+  .grid .pad-9-32 {
+    margin-bottom: 28.125%; }
+  .grid .col-10-32 {
+    width: 31.25%; }
+  .grid .pad-10-32 {
+    margin-bottom: 31.25%; }
+  .grid .col-11-32 {
+    width: 34.375%; }
+  .grid .pad-11-32 {
+    margin-bottom: 34.375%; }
+  .grid .col-12-32 {
+    width: 37.5%; }
+  .grid .pad-12-32 {
+    margin-bottom: 37.5%; }
+  .grid .col-13-32 {
+    width: 40.625%; }
+  .grid .pad-13-32 {
+    margin-bottom: 40.625%; }
+  .grid .col-14-32 {
+    width: 43.75%; }
+  .grid .pad-14-32 {
+    margin-bottom: 43.75%; }
+  .grid .col-15-32 {
+    width: 46.875%; }
+  .grid .pad-15-32 {
+    margin-bottom: 46.875%; }
+  .grid .col-16-32 {
+    width: 50%; }
+  .grid .pad-16-32 {
+    margin-bottom: 50%; }
+  .grid .col-17-32 {
+    width: 53.125%; }
+  .grid .pad-17-32 {
+    margin-bottom: 53.125%; }
+  .grid .col-18-32 {
+    width: 56.25%; }
+  .grid .pad-18-32 {
+    margin-bottom: 56.25%; }
+  .grid .col-19-32 {
+    width: 59.375%; }
+  .grid .pad-19-32 {
+    margin-bottom: 59.375%; }
+  .grid .col-20-32 {
+    width: 62.5%; }
+  .grid .pad-20-32 {
+    margin-bottom: 62.5%; }
+  .grid .col-21-32 {
+    width: 65.625%; }
+  .grid .pad-21-32 {
+    margin-bottom: 65.625%; }
+  .grid .col-22-32 {
+    width: 68.75%; }
+  .grid .pad-22-32 {
+    margin-bottom: 68.75%; }
+  .grid .col-23-32 {
+    width: 71.875%; }
+  .grid .pad-23-32 {
+    margin-bottom: 71.875%; }
+  .grid .col-24-32 {
+    width: 75%; }
+  .grid .pad-24-32 {
+    margin-bottom: 75%; }
+  .grid .col-25-32 {
+    width: 78.125%; }
+  .grid .pad-25-32 {
+    margin-bottom: 78.125%; }
+  .grid .col-26-32 {
+    width: 81.25%; }
+  .grid .pad-26-32 {
+    margin-bottom: 81.25%; }
+  .grid .col-27-32 {
+    width: 84.375%; }
+  .grid .pad-27-32 {
+    margin-bottom: 84.375%; }
+  .grid .col-28-32 {
+    width: 87.5%; }
+  .grid .pad-28-32 {
+    margin-bottom: 87.5%; }
+  .grid .col-29-32 {
+    width: 90.625%; }
+  .grid .pad-29-32 {
+    margin-bottom: 90.625%; }
+  .grid .col-30-32 {
+    width: 93.75%; }
+  .grid .pad-30-32 {
+    margin-bottom: 93.75%; }
+  .grid .col-31-32 {
+    width: 96.875%; }
+  .grid .pad-31-32 {
+    margin-bottom: 96.875%; }
+  .grid .col-32-32 {
+    width: 100%; }
+
+.flex-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; }
+
+.col {
+  width: 25%; }
+
+.flex-grid-third {
+  width: 25%; }
+
+.flex-grid-fourth {
+  width: 20%;
+  margin: 2ex 2.5%; }
+
+body {
+  background: url("../img/clock.jpg") top center no-repeat; }
+  body header {
+    margin-bottom: 0; }
+    body header h1 {
+      width: 25%;
+      float: left;
+      text-align: left;
+      margin: 0;
+      padding: .5ex 0.75em;
+      font-size: 4em;
+      color: red;
+      text-shadow: 5px 5px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; }
+    body header .form {
+      font-size: 18px;
+      margin: 2ex 2em;
+      float: right; }
+      body header .form .form-group {
+        padding: 1ex .5em;
+        text-align: left;
+        color: black; }
+        body header .form .form-group input {
+          border: 2px solid black; }
+      body header .form button {
+        box-sizing: border-box;
+        width: 25%;
+        height: 5ex;
+        margin-left: 10%;
+        float: left;
+        font-size: 0.9em;
+        background: red;
+        color: black;
+        border: 2px solid black;
+        border-radius: 5px; }
+        body header .form button:first-of-type {
+          margin-left: 35%; }
+        body header .form button:hover {
+          color: red;
+          background: black; }
+  body main {
+    box-sizing: border-box;
+    width: auto; }
+    body main .countdown-display {
+      box-sizing: border-box;
+      width: 33.33333%;
+      margin-left: 33.33333%;
+      margin-top: 18ex;
+      text-align: center; }
+      body main .countdown-display h2 {
+        font-size: 3em;
+        color: black;
+        margin-bottom: -0.25ex; }
+      body main .countdown-display h3 {
+        margin: 0;
+        font-size: 2em; }
+        body main .countdown-display h3 span {
+          color: red;
+          font-weight: bolder; }
+
+@media (max-width: 60em) {
+  body {
+    background: red; }
+    body header h1 {
+      width: auto;
+      float: none;
+      text-align: center;
+      padding: 0.5ex 0;
+      font-size: 2em;
+      color: white;
+      border-bottom: 3px solid black;
+      text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; }
+    body header .form {
+      width: auto;
+      margin: 0;
+      font-size: 16px;
+      padding: 2ex 0;
+      float: none; }
+      body header .form .form-group {
+        padding: 1ex 1em; }
+        body header .form .form-group label {
+          padding-right: 10px;
+          font-weight: bold; }
+        body header .form .form-group input {
+          border: 2px solid black; }
+      body header .form button {
+        box-sizing: border-box;
+        float: none;
+        width: 50%;
+        height: auto;
+        margin: 2ex 25%;
+        padding: 0.5ex 0;
+        font-size: 1em;
+        background: black;
+        color: white;
+        border: 0;
+        border-radius: 0; }
+        body header .form button:hover {
+          color: red; }
+    body main {
+      box-sizing: border-box;
+      width: 100%;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+      background: url("../img/clock.jpg") top center no-repeat;
+      background-size: 65vh; }
+      body main .countdown-display {
+        box-sizing: border-box;
+        width: 100%;
+        margin: 0;
+        padding: 3ex 1em;
+        text-align: center; }
+        body main .countdown-display h2 {
+          margin-top: -0.5ex;
+          margin-bottom: 1ex;
+          font-size: 2.5em;
+          color: red; }
+        body main .countdown-display .how {
+          text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; }
+        body main .countdown-display h3 {
+          margin: 0.5ex 0;
+          line-height: 1;
+          font-size: 2em;
+          color: black; }
+          body main .countdown-display h3 span {
+            font-size: 0.8em;
+            color: red; } }
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/*
+ * Hide visually and from screen readers:
+ */
+.hidden {
+  display: none !important; }
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto; }
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+.invisible {
+  visibility: hidden; }
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix:before, .grid:before,
+.clearfix:after,
+.grid:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+.clearfix:after, .grid:after {
+  clear: both; }
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */ }
+
+@media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */ }
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+    box-shadow: none !important;
+    text-shadow: none !important; }
+  a,
+  a:visited {
+    text-decoration: underline; }
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+  /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: ""; }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+  /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+  thead {
+    display: table-header-group; }
+  tr,
+  img {
+    page-break-inside: avoid; }
+  img {
+    max-width: 100% !important; }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3; }
+  h2,
+  h3 {
+    page-break-after: avoid; } }

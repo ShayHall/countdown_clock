@@ -1,0 +1,59 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Countdown Clock</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <!--bower:css-->
+        <link rel="stylesheet" href="../bower_components/normalize-css/normalize.css" />
+        <!--endbower-->
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body ng-app="app" ng-controller="MainCtrl as main">
+      <header class="clearfix">
+        <h1>Countdown Clock</h1>
+        <form class="form">
+          <div class="form-group">
+            <label for="event">Event</label>
+            <input type="text" ng-model="main.event">
+          </div>
+          <div class="form-group">
+            <label for="date">End Date</label>
+            <input type="Date" class="form-control" ng-model="main.date">
+            <input type="Time" class="form-control" ng-model="main.tim">
+          </div>
+            <button ng-click="main.setTimer(main.date, main.tim)">Find Out</button>
+            <button ng-click="main.clearTimer()">Clear</button>
+        </form>
+      </header>
+      <main>
+<span id="clock">{{main.chronos | date:"medium"}}</span>
+        <section class="countdown-display">
+          <h2 ng-if="!main.event" class="how">How long?</h1>
+          <h2 ng-if="main.event">How long until</h2>
+          <h3 ng-if="main.event"><span>{{main.event}}:</span></h3>
+          <h3 ng-if="main.time[3] > 0">Days: <span>{{main.time[3]}}</span></h3>
+          <h3 ng-if="main.time[2] > 0">Hours: <span>{{main.time[2]}}</span></h3>
+          <h3 ng-if="main.time[1] > 0"> Minutes: <span>{{main.time[1]}}</span></h3>
+          <h3 ng-if="main.time[0] > 0"> Seconds: <span>{{main.time[0]}}</span></h3>
+          <h3 ng-if="main.time[3] < 0">Your event has passed.</h3>
+        </section>
+      </main>
+
+        <!--bower:js-->
+        <script src="../bower_components/jquery/dist/jquery.js"></script>
+        <script src="../bower_components/angular/angular.js"></script>
+        <script src="../bower_components/angular-route/angular-route.js"></script>
+        <!--endbower-->
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
